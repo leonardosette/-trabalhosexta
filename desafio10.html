@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +7,47 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #000; /* Preto */
+            color: #fff; /* Texto branco para contraste */
         }
         header {
-            background-color: #2d3e50;
-            color: #fff;
-            padding: 20px;
+            background-color: #00CED1; /* Verde-água */
+            color: white;
             text-align: center;
+            padding: 20px;
         }
         h1 {
             margin: 0;
+            font-size: 2.5em;
         }
-        .movie-section {
+        .movies-container {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
+            margin: 20px;
         }
         .movie {
-            background-color: #fff;
+            background-color: #333; /* Cinza escuro para melhor contraste */
+            margin: 10px;
+            padding: 20px;
+            width: 45%; /* Largura de cada filme */
+            max-width: 400px;
             border-radius: 8px;
-            overflow: hidden;
-            width: 300px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }
-        .movie img {
-            width: 100%;
-            height: auto;
-        }
-        .movie-content {
-            padding: 10px;
+            color: #fff; /* Texto branco */
         }
         .movie h2 {
-            font-size: 1.5em;
-            margin: 10px 0;
+            color: #00CED1; /* Verde-água */
+            margin-top: 0;
         }
-        .movie p {
-            font-size: 1em;
-            color: #555;
-        }
-        .movie video {
+        .movie iframe {
             width: 100%;
-            border: none;
+            height: 315px; /* Altura do vídeo do YouTube */
             border-radius: 8px;
-            margin-top: 10px;
+            margin: 10px 0;
         }
         .rating {
             display: flex;
@@ -68,33 +61,27 @@
             font-size: 2em;
             color: #ccc;
             cursor: pointer;
-            transition: color 0.3s;
         }
-        .rating input:checked ~ label,
-        .rating input:checked ~ label ~ label {
-            color: #ffcc00;
+        .rating input:checked ~ label {
+            color: #ffcc00; /* Dourado */
         }
-        .rating input:focus-visible ~ label {
-            outline: 2px solid #ffcc00;
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #ffcc00; /* Dourado ao passar o mouse */
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Locadora de Filmes</h1>
-</header>
+    <header>
+        <h1>Locadora de Filmes</h1>
+    </header>
 
-<div class="movie-section">
-    <div class="movie">
-        <img src="https://via.placeholder.com/300x180" alt="Imagem do Filme">
-        <div class="movie-content">
-            <h2>Filme Exemplo 1</h2>
-            <p>Uma descrição curta do filme. Este filme é muito interessante!</p>
-            <video controls>
-                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
+    <div class="movies-container">
+        <section class="movie">
+            <h2>Filme 1: Gremlins</h2>
+            <p>Descrição: Billy ganha um Mogwai chamado Gizmo, mas ao quebrar as regras de cuidado (não molhar, não expor à luz e nunca alimentar após a meia-noite), ele libera criaturas travessas e destrutivas chamadas Gremlins. Agora, Billy e Gizmo precisam salvar a cidade do caos causado por essas criaturas. Gremlins é um clássico dos anos 80 que mistura comédia, terror e fantasia de forma única.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x6wReLNFcrQ?si=k1J4W2hCI3SzJ-Im" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div class="rating">
                 <input type="radio" id="star5-1" name="rating1" value="5">
                 <label for="star5-1">&#9733;</label>
@@ -107,18 +94,12 @@
                 <input type="radio" id="star1-1" name="rating1" value="1">
                 <label for="star1-1">&#9733;</label>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="movie">
-        <img src="https://via.placeholder.com/300x180" alt="Imagem do Filme">
-        <div class="movie-content">
-            <h2>Filme Exemplo 2</h2>
-            <p>Outra descrição de filme, desta vez mais emocionante!</p>
-            <video controls>
-                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
+        <section class="movie">
+            <h2>Filme 2: Nosferatu</h2>
+            <p>Descrição: Nosferatu (1922), dirigido por F. W. Murnau, é um clássico do cinema expressionista alemão e uma adaptação não autorizada de Drácula. O filme segue Thomas Hutter, que descobre que o misterioso Conde Orlok é um vampiro aterrorizante. Com atmosfera gótica e a icônica atuação de Max Schreck, Nosferatu é um marco do cinema de horror.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_UnDFjdKAWk?si=EBWf17_eULkGXqBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div class="rating">
                 <input type="radio" id="star5-2" name="rating2" value="5">
                 <label for="star5-2">&#9733;</label>
@@ -131,9 +112,8 @@
                 <input type="radio" id="star1-2" name="rating2" value="1">
                 <label for="star1-2">&#9733;</label>
             </div>
-        </div>
+        </section>
     </div>
-</div>
 
 </body>
 </html>
