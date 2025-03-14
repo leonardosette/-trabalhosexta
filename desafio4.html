@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Desenvolvedor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff0000; /* Vermelho */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .post {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post h2 {
+            margin-top: 0;
+            color: #ff0000; /* Vermelho */
+        }
+        .comment-form {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-form button {
+            background-color: #ff0000; /* Vermelho */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-form button:hover {
+            background-color: #cc0000; /* Vermelho mais escuro */
+        }
+        .comments {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .comment {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        .comment:last-child {
+            border-bottom: none;
+        }
+        .comment h4 {
+            margin: 0;
+            color: #ff0000; /* Vermelho */
+        }
+        .comment p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho do Blog -->
+    <header>
+        <h1>Blog do Desenvolvedor</h1>
+    </header>
+
+    <!-- Seção de Postagem -->
+    <div class="post">
+        <h2>Título da Postagem</h2>
+        <p>Este é o conteúdo da postagem do blog. Aqui você pode compartilhar suas ideias, conhecimentos e experiências com os leitores.</p>
+    </div>
+
+    <!-- Formulário de Comentários -->
+    <div class="comment-form">
+        <h3>Deixe um Comentário</h3>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <textarea id="comment" placeholder="Seu Comentário" rows="4" required></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+    </div>
+
+    <!-- Seção de Comentários -->
+    <div class="comments">
+        <h3>Comentários</h3>
+        <div id="commentList">
+            <!-- Comentários serão exibidos aqui -->
+        </div>
+    </div>
+
+    <script>
+        // Função para adicionar comentários
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Captura os valores dos campos
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const comment = document.getElementById('comment').value;
+
+            // Cria um novo elemento de comentário
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('comment');
+            commentElement.innerHTML = `
+                <h4>${name}</h4>
+                <p>${comment}</p>
+                <small>${email}</small>
+            `;
+
+            // Adiciona o comentário à lista de comentários
+            document.getElementById('commentList').appendChild(commentElement);
+
+            // Limpa o formulário
+            document.getElementById('commentForm').reset();
+        });
+    </script>
+
+</body>
+</html>

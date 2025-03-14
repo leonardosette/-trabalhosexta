@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Projetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Seção de projetos */
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project img {
+            width: 100%; /* Garantir que a largura seja 100% do container */
+            height: 100%; /* Ajuste da altura */
+        }
+
+        .project img.cover {
+            object-fit: cover; /* Usado para cobrir a área com a imagem (cortando se necessário) */
+        }
+
+        .project img.contain {
+            object-fit: contain; /* Usado para exibir a imagem inteira sem corte */
+        }
+
+        .project h3 {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+
+        .project p {
+            padding: 15px;
+            text-align: justify;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Portfólio de Projetos</h1>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <!-- Seção de Projetos -->
+    <section id="projects" class="projects">
+        <div class="project">
+            <img src="https://th.bing.com/th/id/R.dc16f06b01900e18e893544adbc924bf?rik=OEBeIGpIVP%2f2hA&riu=http%3a%2f%2fimage.brazilianbikinishop.com%2fimages%2fproducts%2f1934502703234_EXTRA_7.jpg&ehk=OgBVRh3v3R82tSs9w1PGEWw4LXjrkbNoocNrOYRk6Sk%3d&risl=&pid=ImgRaw&r=0" alt="Projeto 1" class="cover">
+            <h3>Projeto 1</h3>
+            <p>Este projeto foi desenvolvido para uma empresa de sandálias que está começando.</p>
+        </div>
+        <div class="project">
+            <img src="https://th.bing.com/th/id/R.51fcf4b9d56aad1c57c2255ac6a590f8?rik=KG6MEBTDbPx5Zw&riu=http%3a%2f%2fpartiupelomundo.com%2fwp-content%2fuploads%2f2016%2f04%2fdicas-garimpo-passeios-diamantina-minas-e1459489440696.jpg&ehk=HF6envVByoup%2br5CPLosCTLri4QtqQe0esOs%2fvAOwf8%3d&risl=&pid=ImgRaw&r=0" alt="Projeto 2" class="cover">
+            <h3>Projeto 2</h3>
+            <p>O Projeto 2 é um site que fiz para meu garimpo.</p>
+        </div>
+        <div class="project">
+            <img src="https://th.bing.com/th/id/R.1081c4e821da3501580d90c9d5dc78d2?rik=svhJD46fALaNbA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fdinosaur%2fdinosaur_PNG16551.png&ehk=UAz%2fgcE%2biIVuc6yo7FFWRclY3khQWTki%2fWPRl4GOJ2s%3d&risl=1&pid=ImgRaw&r=0" alt="Projeto 3" class="contain">
+            <h3>Projeto 3</h3>
+            <p>Robô que criei para dominar a humanidade.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contact">
+        <p>Entre em contato comigo via e-mail: <a href="mailto:reidamidia22@rei.com">reidamidia22@rei.com</a></p>
+    </footer>
+
+</body>
+</html>

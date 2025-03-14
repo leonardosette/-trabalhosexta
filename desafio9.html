@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast - Título do Podcast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #6a1b9a; /* Roxo escuro */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .audio-player {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .audio-player h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #6a1b9a;
+        }
+        audio {
+            width: 80%;
+            max-width: 500px;
+            margin-top: 10px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #6a1b9a;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Título do Podcast</h1>
+    </header>
+
+    <section class="audio-player">
+        <h2>Episódio Mais Recente</h2>
+        <audio controls>
+            <source src="https://exemplo.com/audio/episodio-recente.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </section>
+
+    <section class="episodes-table">
+        <h2 style="text-align: center; color: #6a1b9a;">Episódios Anteriores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Data</th>
+                    <th>Duração</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Episódio 10: Título do Episódio</td>
+                    <td>10 de Outubro de 2023</td>
+                    <td>45:30</td>
+                </tr>
+                <tr>
+                    <td>Episódio 9: Título do Episódio</td>
+                    <td>3 de Outubro de 2023</td>
+                    <td>50:15</td>
+                </tr>
+                <tr>
+                    <td>Episódio 8: Título do Episódio</td>
+                    <td>26 de Setembro de 2023</td>
+                    <td>42:50</td>
+                </tr>
+                <tr>
+                    <td>Episódio 7: Título do Episódio</td>
+                    <td>19 de Setembro de 2023</td>
+                    <td>47:20</td>
+                </tr>
+                <tr>
+                    <td>Episódio 6: Título do Episódio</td>
+                    <td>12 de Setembro de 2023</td>
+                    <td>39:55</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
